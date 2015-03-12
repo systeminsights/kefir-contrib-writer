@@ -1,0 +1,38 @@
+{
+  "name": "kefir-contrib-writer",
+  "version": "0.0.1",
+  "description": "Functions for working with Kefir writer streams.",
+  "main": "lib/writer.js",
+  "scripts": {
+    "prepublish": "in-publish && (mkdir lib && coffee -cbo lib src) || in-install",
+    "postpublish": "rm -rf lib",
+    "test": "mocha --no-colors test/**/*-spec.coffee",
+    "watch": "mocha --no-colors --watch test/**/*-spec.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/systeminsights/kefir-contrib-writer"
+  },
+  "keywords": [],
+  "author": "System Insights",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/systeminsights/kefir-contrib-writer/issues"
+  },
+  "homepage": "https://github.com/systeminsights/kefir-contrib-writer",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "chai-as-promised": "^4.3.0",
+    "coffee-script": "^1.9.1",
+    "fantasy-tuples": "0.0.1",
+    "in-publish": "^1.1.1",
+    "kefir-contrib-run": "0.0.1",
+    "mocha": "^2.2.1"
+  },
+  "dependencies": {
+    "fantasy-contrib-either": "0.0.1",
+    "fantasy-eithers": "0.0.2",
+    "kefir": "^1.1.0",
+    "ramda": "^0.11.0"
+  }
+}
